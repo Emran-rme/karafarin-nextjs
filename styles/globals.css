@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@import url(fontiran.css);
+@import url(intro.css);
+@import url(materialdesignicons.min.css);
+@import url(styles.css);
+html {
+  @apply font-body;
+}
+@tailwind utilities;
+@import url(ReactToastify.css);
+@import "~react-image-gallery/styles/css/image-gallery.css";
+/* @import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"; */
