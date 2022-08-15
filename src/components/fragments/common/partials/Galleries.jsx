@@ -1,8 +1,8 @@
 import ImageGallery from "react-image-gallery";
 
-import config from "../../../services/config.json";
+import config from "../../../../services/config.json";
 
-export default function Galleries({ styles, data }) {
+export default function Galleries({ data }) {
   const images = data.get_galleries?.map((image, index) => ({
     original: config.karafarinBase + image.image_url,
     thumbnail: config.karafarinBase + image.thumbnail_image_url,

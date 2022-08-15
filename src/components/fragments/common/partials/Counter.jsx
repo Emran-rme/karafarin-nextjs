@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { translateEnglishNumberToPersian } from "../../../helpers/helpers";
+import { translateEnglishNumberToPersian } from "../../../../helpers/helpers";
 
 export default function Counter({ styles, data = null }) {
   const commentsList = useSelector((state) => state.comments);

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import cardStyles from "../../../styles/CourseCard.module.css";
+import cardStyles from "../../../../styles/CourseCard.module.css";
 
 export default function CourseCard() {
   return (

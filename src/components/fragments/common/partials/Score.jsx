@@ -1,7 +1,7 @@
 import { range, isEmpty } from "loadsh";
 import { useDispatch, useSelector } from "react-redux";
-import { translateEnglishNumberToPersian } from "../../../helpers/helpers";
-import { newScore } from "../../../redux/actions/score";
+import { translateEnglishNumberToPersian } from "../../../../helpers/helpers";
+import { newScore } from "../../../../redux/actions/score";
 import { ThreeDots } from "react-loader-spinner";
 
 export default function Score() {

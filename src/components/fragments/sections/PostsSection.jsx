@@ -18,7 +18,6 @@ export default function PostsSection({ styles, data: section, uri }) {
   }, []);
 
   const data = useSelector((state) => state.postSections);
-  console.log(data);
   return (
     <section className="mb-32">
       <div className={styles.product}>
@@ -44,7 +43,7 @@ export default function PostsSection({ styles, data: section, uri }) {
             </div>
           </div>
         </div>
-        <div className="container mx-auto px-20 relative -bottom-20 -mt-20">
+        <div className="container mx-auto sm:px-24 relative -bottom-20 -mt-20">
           <Swiper
             ref={sliderRef}
             dir="rtl"

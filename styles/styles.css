@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden !important ;
+}
+
 ul.nav {
   list-style-type: none;
   margin: 0;

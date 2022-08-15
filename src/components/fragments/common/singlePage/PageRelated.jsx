@@ -1,4 +1,4 @@
-import PostCardHorizontal from "../PostCardHorizontal";
+import { PostCardHorizontal } from "../../../../components";
 
 export default function PageRelated({ styles, title, data }) {
   return (

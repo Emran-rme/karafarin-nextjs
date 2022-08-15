@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Breadcrumb from "../../src/components/common/Breadcrumb";
-import CourseCard from "../../src/components/common/CourseCard";
+import { CourseCard, Breadcrumb } from "../../src/components/";
 
 export default function Shop() {
   return (

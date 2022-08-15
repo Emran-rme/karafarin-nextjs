@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import SinglePage from "../../../src/components/fragments/page/SinglePage";
+import { SinglePage } from "../../../src/components/";
 import { setPages } from "../../../src/redux/actions/pages";
 import {
   clearPageInfo,

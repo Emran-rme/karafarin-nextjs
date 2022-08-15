@@ -1,6 +1,6 @@
 import { Provider } from "react-redux";
 
-import MainLayout from "../src/components/layout/MainLayout";
+import { MainLayout } from "../src/components/";
 import "../styles/globals.css";
 import { store } from "../src/redux/store/index";
 import NextNProgress from "nextjs-progressbar";

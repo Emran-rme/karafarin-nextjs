@@ -2,9 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import Breadcrumb from "../../../src/components/common/Breadcrumb";
+import { Breadcrumb } from "../../../src/components/";
 
 import courseStyles from "../../../styles/Course.module.css";
+
 export default function Course() {
   const router = useRouter();
   const { id, course } = router.query;

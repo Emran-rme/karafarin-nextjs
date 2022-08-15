@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 import { isEmpty } from "loadsh";
-import config from "../../../../services/config.json";
-const Menu = ({ data }) => {
+import { useSelector } from "react-redux";
+const Menu = () => {
+  const { categories: data, uri } = useSelector((state) => state.main);
   return (
     <div className="w-2/3 flex items-center justify-start px-5">
       <ul className="nav">
@@ -20,16 +21,13 @@ const Menu = ({ data }) => {
                 </Link>
                 {item.drop_Down_Menu ? (
                   <div className="dropdown-content">
-                    <ul className="-intro-y bg-white border-t-4 border-blue-600 rounded flex ">
+                    <ul className="-intro-y bg-white border-t-4 border-blue-600 rounded grid grid-cols-3 gap-4 ">
                       {item.get_category?.map((childCategory) => (
                         <li key={childCategory.id}>
                           <Link href={`/${childCategory.category_slug}`}>
                             <a>
                               <img
-                                src={
-                                  config.karafarinBase +
-                                  childCategory.category_image_url
-                                }
+                                src={uri + childCategory.category_image_url}
                                 alt={childCategory.category_name}
                               />
                               <span>{childCategory.category_name}</span>

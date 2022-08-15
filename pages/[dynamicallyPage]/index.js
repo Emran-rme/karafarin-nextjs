@@ -6,8 +6,7 @@ import { isEmpty } from "loadsh";
 
 import { dynamicallyCatURL } from "../../src/services/mainService";
 
-import PostCard from "../../src/components/common/PostCard";
-import Alert from "../../src/components/common/Alert";
+import { PostCard, Alert } from "../../src/components";
 
 export default function index({ data }) {
   const [search, setSearch] = useState("");
@@ -39,7 +38,9 @@ export default function index({ data }) {
       </div>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 gap-4 my-8">
         {!isEmpty(filteredPost) ? (
-          filteredPost.map((news) => <PostCard page={news} key={news.id} uri={data.uri}/>)
+          filteredPost.map((news) => (
+            <PostCard page={news} key={news.id} uri={data.uri} />
+          ))
         ) : !isEmpty(data.category.get_category) ? (
           <div className="col-span-12 ">
             <div className="grid xl:grid-cols-8 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-1 gap-4">

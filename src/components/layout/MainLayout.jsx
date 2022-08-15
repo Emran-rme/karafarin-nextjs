@@ -1,14 +1,19 @@
-import Footer from "../common/Footer";
-import Nav from "../common/Nav";
-import TopBanner from "../common/TopBanner";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setCategories } from "../../redux/actions/main";
+import { Footer, Nav, TopBanner } from "../";
 
 export default function MainLayout({ children }) {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setCategories());
+  }, []);
   return (
-    <div dir="rtl">
+    <>
       <TopBanner />
       <Nav />
       {children}
       <Footer />
-    </div>
+    </>
   );
 }

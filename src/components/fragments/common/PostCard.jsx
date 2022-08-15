@@ -1,21 +1,18 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import config from "../../services/config.json";
-import cardStyles from "../../../styles/PostCardHorizontal.module.css";
+import cardStyles from "../../../../styles/PostCard.module.css";
 
-export default function PostCardHorizontal({ page }) {
+export default function PostCard({ page, uri }) {
   const router = useRouter();
+
   return (
     <div className={cardStyles.postCard}>
-      <div className="w-1/3 max-h-52 border rounded-lg overflow-hidden bg-gray-200">
-        <img
-          src={config.karafarinBase + page.thumbnail_image_url}
-          className="w-full"
-        />
+      <div className="w-full max-h-52 border rounded-lg overflow-hidden bg-gray-200">
+        <img src={uri + page.thumbnail_image_url} className="w-full" />
       </div>
-      <div className="flex mr-8 flex-col flex-1">
-        <div className="w-full py-3">
+      <div>
+        <div className="w-full py-5">
           <h4 className="font-bold text-gray-500 text-lg cursor-pointer hover:text-blue-500">
             <span className="mdi mdi-card-text-outline ml-2" />
             <Link
@@ -25,7 +22,12 @@ export default function PostCardHorizontal({ page }) {
             </Link>
           </h4>
         </div>
-
+        <div className="py-5 text-sm">
+          {page.page_body
+            .replace(/(<([^>]+)>)/gi, "")
+            .replace(/\&nbsp;/g, " ")
+            .substring(0, 50) + "..."}
+        </div>
         <div className="flex justify-between items-center">
           <div className="text-gray-500 text-xs">
             <span className="mdi mdi-calendar-month-outline ml-1" />

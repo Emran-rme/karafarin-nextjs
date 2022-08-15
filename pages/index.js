@@ -1,16 +1,12 @@
 import Head from "next/head";
-
-import SlidersSection from "../src/components/fragments/sections/SlidersSection";
-import Index from "../src/components/fragments/dynamicComponent";
+import { SlidersSection, DynamicComponent } from "../src/components";
 
 import styles from "../styles/Home.module.css";
 import { initMain } from "../src/services/mainService";
 
 export default function Home({ data }) {
-  const { sliders, sections,  uri } = data.data;
+  const { sliders, sections, uri } = data.data;
 
-  
-  
   return (
     <div className="continer">
       <Head>
@@ -20,16 +16,16 @@ export default function Home({ data }) {
       </Head>
 
       <main className={styles.main}>
-        <SlidersSection sliders={sliders} uri={uri}/>
-        {sections.map(section => 
-          <Index
+        <SlidersSection sliders={sliders} uri={uri} />
+        {sections.map((section) => (
+          <DynamicComponent
             key={section.id}
             styles={styles}
             type={section.type}
             data={section}
             uri={uri}
           />
-        )}
+        ))}
       </main>
     </div>
   );

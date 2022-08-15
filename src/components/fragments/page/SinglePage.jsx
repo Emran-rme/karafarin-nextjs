@@ -1,13 +1,16 @@
 import { useSelector } from "react-redux";
 import { isEmpty } from "loadsh";
 
+import {
+  PageDescription,
+  PageVideo,
+  PageFaq,
+  PageRelated,
+  PageComment,
+  CourseInfoBox,
+} from "../../";
+
 import singlePageStyles from "../../../../styles/SinglePage.module.css";
-import PageDescription from "../../common/singlePage/PageDescription";
-import PageVideo from "../../common/singlePage/PageVideo";
-import PageFaq from "../../common/singlePage/PageFaq";
-import PageRelated from "../../common/singlePage/PageRelated";
-import PageComment from "../../common/singlePage/PageComment";
-import CourseInfoBox from "../../common/CourseInfoBox";
 
 export default function SinglePage({ data }) {
   const singlePageInfo = useSelector((state) => state.singlePage);

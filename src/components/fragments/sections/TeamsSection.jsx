@@ -7,12 +7,12 @@ import "swiper/css/navigation";
 
 export default function TeamSection({ styles, data, uri }) {
   return (
-    <section className="container mx-auto px-24 my-14 ">
+    <section className="container mx-auto sm:px-24 my-14 ">
       <div
         className={`flex justify-between bg-blue-800 border shadow-xl overflow-hidden rounded-2xl ${styles.customersImage}`}
       >
         <div className=" p-5 w-1/4 bg-blue-100 shadow-xl rounded-l-full flex justify-center items-center ">
-          <h3 className="text-center font-bold text-gray-600 text-3xl border-b-4 border-lime-800 py-4">
+          <h3 className="text-center font-bold text-gray-600 sm:text-3xl text-base  border-b-4 border-lime-800 py-4">
             {data.get_content?.title}
           </h3>
         </div>
@@ -37,7 +37,7 @@ export default function TeamSection({ styles, data, uri }) {
                   <div className="rounded-full flex items-center justify-center h-40 w-40 bg-white overflow-hidden">
                     <img className="w-3/4" src={uri + item.image_url} />
                   </div>
-                  <p className="mt-8 text-slate-200 font-body text-xl">
+                  <p className="mt-8 text-slate-200 font-body sm:text-xl text-base ">
                     {item.name}
                   </p>
                 </div>

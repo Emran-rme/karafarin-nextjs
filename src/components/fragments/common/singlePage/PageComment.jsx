@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 
 import { isEmpty } from "loadsh";
 import SimpleReactValidator from "simple-react-validator";
-import { initComment, newComment } from "../../../redux/actions/comments";
-import Modal from "../../fragments/modal/Modal";
+import { initComment, newComment } from "../../../../redux/actions/comments";
+import { Modal } from "../../../";
 
 export default function PageComment({ styles, data, loading, pageId }) {
   const [showModal, setShowModal] = useState(false);

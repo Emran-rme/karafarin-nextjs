@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ServicesSection({ data, styles, uri }) {
   return (
-    <section className="container mx-auto px-24 my-14">
+    <section className="container mx-auto sm:px-24  my-14">
       <div className="flex flex-col rounded-r-3xl rounded-l-full justify-between">
         <div className="w-full p-2">
           <div className="w-full h-full rounded-2xl transition-all duration-500 shadow-md max-h-60  shadow-blue-500 p-0 hover:rotate-1 cursor-pointer hover:bg-blue-200 text-slate-800 text-justify">
@@ -22,7 +22,7 @@ export default function ServicesSection({ data, styles, uri }) {
         </div>
         <div className="flex-1 p-2 bg-gradient-to-t from-slate-50 rounded-b-2xl border-b">
           <div
-            className={`w-full p-8 grid grid-cols-6 gap-4 ${styles.servicesMenu}`}
+            className={`w-full p-8 grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4 ${styles.servicesMenu}`}
           >
             {data.get_content?.get_content_files?.map((item) => (
               <Link href={item.link} key={item.id} passHref>

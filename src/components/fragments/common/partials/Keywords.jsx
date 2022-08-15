@@ -1,5 +1,3 @@
-import { translateEnglishNumberToPersian } from "../../../helpers/helpers";
-
 export default function Keywords({ styles = null, data = null }) {
   return (
     <span className={styles.taggedAs}>

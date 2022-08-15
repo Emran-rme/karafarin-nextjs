@@ -1,7 +1,4 @@
-import Counter from "./partials/Counter";
-import Keywords from "./partials/Keywords";
-import Galleries from "./partials/Galleries";
-import Score from "./partials/Score";
+import { Counter, Keywords, Galleries, Score } from "../../";
 
 const Components = {
   Counter,
