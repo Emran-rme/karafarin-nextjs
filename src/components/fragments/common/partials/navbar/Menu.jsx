@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const Menu = () => {
   const { categories: data, uri } = useSelector((state) => state.main);
   return (
-    <div className="w-2/3 flex items-center justify-start px-5">
+    <div className="w-full flex items-center justify-start px-5">
       <ul className="nav">
         {!isEmpty(data) &&
           data.map((item) =>

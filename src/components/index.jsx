@@ -1,6 +1,7 @@
 export { default as Auth } from "./fragments/common/partials/navbar/Auth";
 export { default as Logo } from "./fragments/common/partials/navbar/Logo";
 export { default as Menu } from "./fragments/common/partials/navbar/Menu";
+export { default as MobileMenu } from "./fragments/common/partials/navbar/MobileMenu";
 export { default as ShopMenu } from "./fragments/common/partials/navbar/ShopMenu";
 
 export { default as Counter } from "./fragments/common/partials/Counter";

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 const Logo = () => {
   return (
-    <div className="w-1/5 flex items-center cursor-pointer py-2 ">
+    <div className="w-full md:w-1/5 flex items-center cursor-pointer py-2 ">
       <Link href="/">
         <a className="w-4/5">
           <Image

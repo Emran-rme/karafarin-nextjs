@@ -22,7 +22,7 @@ export default function ServicesSection({ data, styles, uri }) {
         </div>
         <div className="flex-1 p-2 bg-gradient-to-t from-slate-50 rounded-b-2xl border-b">
           <div
-            className={`w-full p-8 grid lg:grid-cols-6 md:grid-cols-4 grid-cols-2 gap-4 ${styles.servicesMenu}`}
+            className={`w-full p-8 grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-2 gap-4 ${styles.servicesMenu}`}
           >
             {data.get_content?.get_content_files?.map((item) => (
               <Link href={item.link} key={item.id} passHref>
