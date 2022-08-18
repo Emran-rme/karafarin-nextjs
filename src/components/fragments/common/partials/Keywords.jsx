@@ -6,11 +6,7 @@ export default function Keywords({ styles = null, data = null }) {
         <span className="ml-1">برچسب:</span>
       </div>
       {data.keywords?.split(",").map((item, index) => (
-        <a
-          key={index}
-          href={`https://reactapp.ir/product-tag/${item.split(" ").join("-")}}`}
-          rel="tag"
-        >
+        <a key={index} href={item.split(" ").join("-")} rel="tag">
           {item}
         </a>
       ))}

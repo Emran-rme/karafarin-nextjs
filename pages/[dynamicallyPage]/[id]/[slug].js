@@ -35,7 +35,7 @@ export default function Slug({ data }) {
   }, [data.page]);
 
   return (
-    <div className="container px-24 mx-auto">
+    <div className="container md:px-24 mx-auto">
       <Head>
         <title> {data.page.page_title} | بیمه کارآفرین نمایندگی بابازاده</title>
         <meta
